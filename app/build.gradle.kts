@@ -1,46 +1,34 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
 }
 
 android {
-    namespace  = "com.build.gcunlock"
-    compileSdk = 36
+    namespace = "com.grok.pd2453gc"
+    compileSdk = 34
+
     defaultConfig {
-        applicationId = "com.build.gcunlock"
-        minSdk        = 31
-        targetSdk     = 36
-        versionCode   = 1
-        versionName   = "1.0.0"
+        applicationId = "com.grok.pd2453gc"
+        minSdk = 29
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0.20"
     }
+
     buildTypes {
         release {
-            isMinifyEnabled   = true
-            isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
-        debug {
             isMinifyEnabled = false
-            applicationIdSuffix = ".debug"
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions { jvmTarget = "17" }
-    packaging {
-        resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
-    }
 }
 
 dependencies {
-    // LSPosed API (compile-only — fornecido pelo framework em runtime)
-    compileOnly("io.github.libxposed:api:100")
-    // LSPosed service bridge
-    implementation("io.github.libxposed:service:100")
-    // Coroutines para StateFlow no ConfigBridge
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
-    // AndroidX Core
-    implementation("androidx.core:core-ktx:1.13.1")
+    // SÓ A PORRA DA API 102, SEM SERVICE NENHUM
+    compileOnly("io.github.libxposed:api:102.0.0")
+    
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }
