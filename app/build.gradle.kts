@@ -26,7 +26,6 @@ android {
 }
 
 dependencies {
-    // APENAS A API 102, SEM SERVICE, SEM JITPACK!
     compileOnly("io.github.libxposed:api:102.0.0")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
