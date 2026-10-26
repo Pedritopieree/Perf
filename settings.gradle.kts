@@ -5,5 +5,12 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "GCUnlock"
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Perf"
 include(":app")
